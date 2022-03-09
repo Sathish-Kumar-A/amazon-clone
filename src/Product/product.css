@@ -1,0 +1,10 @@
+.product_container{
+    background-color: white;
+}
+.product_rating{
+    display:flex;
+
+}
+.star_img{
+    height:20px;
+}

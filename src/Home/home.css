@@ -1,0 +1,11 @@
+.home_productSection{
+    border:1px solid;
+    background-color:#eaeded;
+    border-radius:10px ;
+}
+.home_products{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow:row wrap;
+}

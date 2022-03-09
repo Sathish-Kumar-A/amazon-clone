@@ -1,6 +1,6 @@
 import React from 'react';
 import "./header.css";
-import amazon_img from "../Assets/amazon_img.png";
+import amazon_img from "../Assets/Header/amazon_img.png";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
