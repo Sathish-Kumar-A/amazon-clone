@@ -3,12 +3,8 @@ import star from "../Assets/Product/star.svg";
 import "./product.css";
 
 export const Product = ({ productDetails }) => {
-    // console.log(productDetails);
     const rating = productDetails["rating"];
     const starArr = Array(rating).fill(star);
-    // starArr.fill(star,0,rating+1)
-    // // starArr.length=rating
-    console.log(starArr);
   return (
           <div className="product_container">
             <p className="product_title">{productDetails["title"]}</p>
@@ -19,16 +15,18 @@ export const Product = ({ productDetails }) => {
           <div className="product_rating">
               {starArr.map((star,index) => {
                   return (
-                      <div>
+                      <div key={index} >
                           <img
                               src={star}
                               className="star_img"
-                              key={index} />
+                              alt="star_img"
+                              />
                       </div>
                   )
               })}
           </div>
           <h3 className="product_price">Rs.{productDetails["price"]}</h3>
+          <button className="product_cartBtn">Add to cart</button>
           </div>
   )
 }

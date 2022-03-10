@@ -45,17 +45,25 @@
 }
 .header_optionLineOne{
     font-size: 13px;
+    cursor: pointer;
 }
 .header_optionLineTwo{
     font-size: 15px;
     font-weight: 800;
+    cursor: pointer;
 }
 .header_optionBasket{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 .header_cartValue{
     margin:0 10px;
 }
+
+/* .header_logo:hover,.header_nav >div:hover{
+    border:1px solid white;
+    padding: 5px;
+} */

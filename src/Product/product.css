@@ -1,10 +1,35 @@
 .product_container{
-    background-color: white;
+    background-color: #ffffff;
+    margin:10px;
+    padding: 10px;
+    /* width:40%; */
+    flex: 1;
+    /* text-align: center; */
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+}
+.product_title{
+    width:70%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+.product_img{
+    width:50%;
+}
+.product_title,.product_img{
+    margin: 10px 0;
+}
+.product_rating,.product_price{
+    margin: 5px 0;
 }
 .product_rating{
     display:flex;
 
 }
 .star_img{
-    height:20px;
+    height:30px;
 }

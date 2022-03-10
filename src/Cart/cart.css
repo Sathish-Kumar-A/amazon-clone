@@ -1,0 +1,24 @@
+.cart_container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+.left_checkout{
+    flex:2;
+    background-color: white;
+    margin-right: 10px;
+    padding: 10px;
+}
+.right_checkout{
+    flex:1
+}
+.left_checkoutImage{
+    width:100%;
+    margin-bottom: 10px;
+    /* height:80px; */
+    /* object-fit: contain; */
+}
+.cart_title {
+    border-bottom: 1px solid lightgray;
+}

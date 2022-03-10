@@ -45,11 +45,11 @@ export const ImageSlider = () => {
         }
     }
   return (
-    <div className="slider_container">
-        <img
-        src={image}
-        className="banner_img"
-          />
+      <div className="slider_container">
+                <img
+                src={image}
+                className="banner_img"
+                    />
           
           <div className="slider_control">
                 <img
