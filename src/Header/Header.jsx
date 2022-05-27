@@ -4,9 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import amazon_img from "../Assets/Header/amazon_img.png";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import { useStateValue } from '../context/StateProvider';
 
 export const Header = () => {
     const navigate = useNavigate();
+    const [state, dispatch] = useStateValue();
+    const { cart } = state;
   return (
       <div className="header">
           <img
@@ -40,7 +43,7 @@ export const Header = () => {
               </div>
               <div className="header_optionBasket" onClick={()=>navigate("/cart")}>
                   <ShoppingBasketIcon />
-                  <span className="header_optionLineTwo header_cartValue">0</span>
+                  <span className="header_optionLineTwo header_cartValue">{cart.length}</span>
               </div>
           </div>
       </div>

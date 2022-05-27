@@ -1,10 +1,36 @@
 import React from 'react';
 import star from "../Assets/Product/star.svg";
+import { useStateValue } from '../context/StateProvider';
 import "./product.css";
 
 export const Product = ({ productDetails }) => {
     const rating = productDetails["rating"];
     const starArr = Array(rating).fill(star);
+    const [state, dispatch] = useStateValue();
+    const { cart } = state;
+
+    const checkItemPresent = () => {
+        const item = cart.find(item => item.id === productDetails.id);
+        if (item) {
+            return true;
+        }
+        return false;
+    }
+
+    const addToCart = () => {
+        if (!checkItemPresent()) { 
+            dispatch({
+                type: "ADD_TO_CART",
+                payload: productDetails
+            })
+        }
+        else {
+            dispatch({
+                type: "REMOVE_FROM_CART",
+                payload: productDetails.id
+            })
+        }
+    }
   return (
           <div className="product_container">
             <p className="product_title">{productDetails["title"]}</p>
@@ -26,7 +52,7 @@ export const Product = ({ productDetails }) => {
               })}
           </div>
           <h3 className="product_price">Rs.{productDetails["price"]}</h3>
-          <button className="product_cartBtn">Add to cart</button>
+          <button className="btn btn-warning" onClick={addToCart}>{checkItemPresent()?"Remove from Cart":"Add to cart"}</button>
           </div>
   )
 }

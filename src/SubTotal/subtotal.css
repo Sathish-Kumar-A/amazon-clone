@@ -1,3 +1,4 @@
 .subTotal_container{
-    background-color: white;
+    background-color: white !important;
+    height:170px;
 }
