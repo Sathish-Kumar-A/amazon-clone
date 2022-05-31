@@ -21,7 +21,7 @@ export const Product = ({ productDetails }) => {
         if (!checkItemPresent()) { 
             dispatch({
                 type: "ADD_TO_CART",
-                payload: productDetails
+                payload: {...productDetails,quantity:1}
             })
         }
         else {

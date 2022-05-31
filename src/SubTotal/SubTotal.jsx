@@ -5,8 +5,8 @@ import { useStateValue } from '../context/StateProvider';
 import "./subtotal.css";
 
 export const SubTotal = () => {
-  const [{ cart }, dispatch] = useStateValue();
-  const totalPrice=cart.reduce((acc,curr)=>acc+curr.price,0);
+  const [{ cart,totalPrice }, dispatch] = useStateValue();
+  // const totalPrice=cart.reduce((acc,curr)=>acc+curr.price,0);
   const free = true;
   return (
     <div className='subTotal_container d-flex flex-column justify-content-between py-3 px-4'>

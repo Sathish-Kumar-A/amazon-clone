@@ -4,6 +4,8 @@ import { Home } from './Home/Home';
 import { Cart } from './Cart/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Login } from './login/Login';
+import {Signup} from './signup/Signup';
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
             <Header />
             < Home />
           </>} />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
           <Route path="/cart" element={
             <>

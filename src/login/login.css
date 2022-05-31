@@ -1,0 +1,41 @@
+.login_wrapper{
+    background-color: white !important;
+    height:100vh;
+}
+
+.amazon_img{
+    cursor: pointer;
+}
+
+.email_input{
+    padding:5px 5px;
+    border-radius:5px;
+    border:1px solid grey;
+    /* caret-color: #e1612b; */
+}
+.email_input:focus{
+    border:1px solid #e1612b;
+    outline: none;
+    box-shadow: 0px 0px 5px #e1612b;
+    outline-width: 5px;
+}
+.continue_btn{
+    background-color: #F1C65C;
+    /* color:white; */
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding:5px 0;
+}
+.line{
+    color: rgb(101, 101, 101);
+}
+.create_account_btn{
+    background-color: #EBEDEF;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: black;
+    cursor: pointer;
+    /* width:100%; */
+}
