@@ -1,0 +1,14 @@
+.signup_wrapper{
+    background-color: white !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signup_wrapper>h3{
+    font-size: 15px !important;
+}
+.signIn_anchor{
+    cursor: pointer;
+}
