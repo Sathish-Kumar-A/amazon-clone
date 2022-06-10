@@ -1,10 +1,13 @@
 import React from 'react';
 import "./home.css";
 import { Product } from '../Product/Product';
+import { useStateValue } from '../context/StateProvider';
 import { ImageSlider } from '../ImageSlider/ImageSlider';
 import { productsOne,productsTwo } from '../config/productConfig';
 
 export const Home = () => {
+  const [state, dispatch] = useStateValue();
+  console.log(state);
   return (
     <div className='home_container'>
       <ImageSlider />
