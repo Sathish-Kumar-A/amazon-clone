@@ -1,4 +1,5 @@
 import './App.css';
+import toast, { Toaster } from "react-hot-toast";
 import { Header } from './Header/Header';
 import { Home } from './Home/Home';
 import { Cart } from './Cart/Cart';
@@ -12,6 +13,7 @@ function App() {
     <div className="components">
       {/* <Header /> */}
       <BrowserRouter>
+        <Toaster position="top-center" />
         <Routes>
 
           <Route path='/' element={<>

@@ -1,15 +1,15 @@
 import React from 'react';
 import "./header.css";
 import { useNavigate } from 'react-router-dom';
+import { useStateValue } from '../context/StateProvider';
 import amazon_img from "../Assets/Header/amazon_img.png";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import { useStateValue } from '../context/StateProvider';
 
 export const Header = () => {
     const navigate = useNavigate();
     const [state, dispatch] = useStateValue();
-    const { cart } = state;
+    const { cart,credentials } = state;
   return (
       <div className="header">
           <img
@@ -30,16 +30,17 @@ export const Header = () => {
 
           <div className="header_nav">
               <div className="header_option">
-                  <span className="header_optionLineOne">Hello Guest</span>
-                  <span className="header_optionLineTwo" onClick={()=>navigate("/login")}>Sign In</span>
-              </div>
-              <div className="header_option">
                   <span className="header_optionLineOne">Returns</span>
                   <span className="header_optionLineTwo">& Orders</span>
               </div>
               <div className="header_option">
                   <span className="header_optionLineOne">Your</span>
                   <span className="header_optionLineTwo">Prime</span>
+              </div>
+              <div className="header_option">
+                  <span className="header_optionLineOne">Hello {credentials===null && "Guest"}</span>
+                  {credentials === null && <span className="header_optionLineTwo" onClick={() => navigate("/login")}>Sign In</span>}
+                  {credentials !== null && <span className="header_optionLineTwo" onClick={() => navigate("/profile")}>{credentials.email}</span>}
               </div>
               <div className="header_optionBasket" onClick={()=>navigate("/cart")}>
                   <ShoppingBasketIcon />

@@ -1,7 +1,7 @@
 export const initialState = {
     cart: [],
     totalPrice: 0,
-    token:null
+    credentials: null
 }
 
 const calculatePrice = (cart) => {
@@ -27,8 +27,8 @@ export const reducer = (state, action) => {
         case "UPDATE_QUANTITY": { 
             return { ...state, cart:updateQuantity(state["cart"],action.payload),totalPrice:calculatePrice(state["cart"])};
         }
-        case "UPDATE_TOKEN": {
-            return { ...state, token: action.payload };
+        case "UPDATE_CREDENTIALS": {
+            return { ...state, credentials: action.payload };
         }
     }
 }
