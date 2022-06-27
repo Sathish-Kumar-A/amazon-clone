@@ -6,6 +6,7 @@ import { Cart } from './Cart/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Login } from './login/Login';
+import { Payment } from './Payment/Payment';
 import {Signup} from './signup/Signup';
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
               <Cart />
             </>
           } />
+
+          <Route path="/payment" element={<><Header/><Payment /></>} />
         </Routes>
       </BrowserRouter>
     </div>

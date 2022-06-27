@@ -1,11 +1,21 @@
 import React from 'react';
 import CurrencyFormat from 'react-currency-format';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 import { useStateValue } from '../context/StateProvider';
 import "./subtotal.css";
 
 export const SubTotal = () => {
-  const [{ cart,totalPrice }, dispatch] = useStateValue();
+  const [{ cart, totalPrice,credentials }, dispatch] = useStateValue();
+  const navigate = useNavigate();
+  const routeTo = () => {
+    if (credentials === null) {
+      navigate("/login");
+    }
+    else {
+      navigate("/payment");
+    }
+  }
   // const totalPrice=cart.reduce((acc,curr)=>acc+curr.price,0);
   const free = true;
   return (
@@ -30,7 +40,7 @@ export const SubTotal = () => {
         thousandSeparator={true}
         prefix={'₹'}
       />
-      <button className='btn btn-warning'>Proceed to Buy</button>
+      <button className='btn btn-warning' onClick={routeTo}>Proceed to Buy</button>
       </div>
   )
 }

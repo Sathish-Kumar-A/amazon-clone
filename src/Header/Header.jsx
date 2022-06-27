@@ -38,9 +38,9 @@ export const Header = () => {
                   <span className="header_optionLineTwo">Prime</span>
               </div>
               <div className="header_option">
-                  <span className="header_optionLineOne">Hello {credentials===null && "Guest"}</span>
-                  {credentials === null && <span className="header_optionLineTwo" onClick={() => navigate("/login")}>Sign In</span>}
-                  {credentials !== null && <span className="header_optionLineTwo" onClick={() => navigate("/profile")}>{credentials.email}</span>}
+                  <span className="header_optionLineOne">Hello {credentials===null ? "Guest":credentials.email}</span>
+                  <span className="header_optionLineTwo" onClick={() => navigate("/login")}>{credentials === null ? "Sign In" : "Sign Out"}</span>
+                  {/* {credentials !== null && <span className="header_optionLineTwo" onClick={() => navigate("/profile")}>Sign Out</span>} */}
               </div>
               <div className="header_optionBasket" onClick={()=>navigate("/cart")}>
                   <ShoppingBasketIcon />
