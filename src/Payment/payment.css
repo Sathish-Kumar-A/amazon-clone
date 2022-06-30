@@ -5,3 +5,26 @@
 .bold_text{
     font-weight: 550;
 }
+.small{
+    font-size: 12px;
+}
+.spacer{
+    height:10px;
+}
+.card_row{
+    background-color: #FCF5EE;
+    border: 1px solid red !important;
+    padding: 10px !important;
+    border-radius: 5px;
+}
+.cvv_input{
+    padding: 3px 5px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    margin-left:5px;
+}
+.cvv_input:focus{
+    border: 1px solid red !important;
+    outline: none !important;
+    box-shadow: 0px 0px 3px red;
+}

@@ -41,26 +41,34 @@ export const Payment = () => {
                       </tr>
                   </thead>
                   <tbody>
+                    <tr className = 'spacer' > </tr>
                       {
                           savedCards.map((card, index) => {
                               return (
-                                  <Card
-                                      active={cardActive === card.cardNumber}
-                                      changeActive={(index) => setCardActive(index)}
-                                      index={index}
-                                      key={index}
-                                      bankName={card["bankName"]}
-                                      cardType={card["cardType"]}
-                                      cardNumber={card["cardNumber"]}
-                                      cardModelImage={card["cardModelImage"]}
-                                      nameOnCard={card["nameOnCard"]}
-                                      expiry={card["expiry"]}
-                                  />   
+                                      <Card
+                                          active={cardActive === card.cardNumber}
+                                          changeActive={(index) => setCardActive(index)}
+                                          index={index}
+                                          key={index}
+                                          bankName={card["bankName"]}
+                                          cardType={card["cardType"]}
+                                          cardNumber={card["cardNumber"]}
+                                          cardModelImage={card["cardModelImage"]}
+                                          nameOnCard={card["nameOnCard"]}
+                                          expiry={card["expiry"]}
+                                      />   
                               )
                          }) 
                       }
                   </tbody>
               </table>
+              <div>
+                  <h5 className='mt-4'>Another payment method</h5>
+                  <hr />
+                  <div>
+
+                  </div>
+              </div>
           </div>
     </div>
   )
